@@ -93,7 +93,7 @@ class App extends React.Component<Props, State>{
             <div>
                 <p>Elections</p>
                 {
-                    elections
+                    elections ? elections : (<p>no elections found</p>)
                 }
             </div>
         )
