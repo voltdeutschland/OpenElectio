@@ -1,2 +1,2 @@
 # OpenElectio
-Eine Open Source Wahlkampfhilfe.
+Eine Open Source Wahlentscheidungshilfe.
