@@ -1,4 +1,8 @@
 // @flow
+import type { AnswerType } from "../typedefs/AnswerType";
+import type { PartyType } from "../typedefs/PartyType";
+
+
 class EvaluationHelper {
     /**
      * Evaluates concordance of user and parties answers
@@ -8,9 +12,9 @@ class EvaluationHelper {
      * @returns {Array<{name: string, description: string, logoPath: string, answers: Array<{value: (number|number|number)}>, concordance: number}>}
      */
     static evaluateAnswers = (
-        answers: Array<{ value: -1 | 0 | 1 | null, weight: number }>,
-        parties: Array<{ name: string, description: string, logoPath: string, answers: Array<{ value: -1 | 0 | 1 }>, concordance: number }>
-    ): Array<{ name: string, description: string, logoPath: string, answers: Array<{ value: -1 | 0 | 1 }>, concordance: number }> => {
+        answers: Array<AnswerType>,
+        parties: Array<PartyType>,
+    ): Array<PartyType> => {
         for (let i = 0; i < parties.length; i++) {
             parties[i].concordance = this.evaluateParty(answers, parties[i].answers);
         }
@@ -25,7 +29,7 @@ class EvaluationHelper {
      * @returns {number}
      */
     static evaluateParty = (
-        userAnswers: Array<{ value: -1 | 0 | 1 | null, weight: number }>,
+        userAnswers: Array<AnswerType>,
         partyAnswers: Array<{ value: -1 | 0 | 1 | null }>
     ): number => {
         let maxPoints: number = 0;

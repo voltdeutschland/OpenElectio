@@ -1,16 +1,21 @@
 // @flow
-import React from 'react';
-import './App.css';
-import Question from './components/question/Question';
-import SharedConstants from './constants/SharedConstants';
-import ElectionsService from './services/ElectionsService';
+import React from "react";
+import "./App.css";
+import Question from "./components/question/Question";
+import SharedConstants from "./constants/SharedConstants";
+import ElectionsService from "./services/ElectionsService";
+
+import type { QuestionType } from "./typedefs/QuestionType";
+import type { AnswerType } from "./typedefs/AnswerType";
+import type { PartyType } from "./typedefs/PartyType";
+import type { ElectionType } from "./typedefs/ElectionType";
 
 type Props = {};
 type State = {
-    elections: Array<{id: string, name: string, description: string}>,
-    questions: ?Array<{title: string, text: string}>,
-    answers: ?Array<{value: -1 | 0 | 1 | null, weight: number}>,
-    parties: ?Array<{name: string, description: string, logoPath: string, answers: Array<{value: -1 | 0 | 1}>}>,
+    elections: Array<ElectionType>,
+    questions: ?Array<QuestionType>,
+    answers: ?Array<AnswerType>,
+    parties: ?Array<PartyType>,
     step: string,
     activeQuestion: number
 };
@@ -53,13 +58,14 @@ class App extends React.Component<Props, State>{
         }
     };
 
-    persistedSetState = (newState) => {
-        return new Promise((resolve) => {
-            this.setState(newState, () => {
-                localStorage.setItem(SharedConstants.STORAGE_PATH, JSON.stringify(newState));
-                resolve()
-            });
-        });
+    onAnswer = (answer: -1 | 0 | 1 | null) => {
+        let answers = this.state.answers;
+        answers[this.state.activeQuestion] = answer;
+        if(this.state.activeQuestion < this.state.answers.length){
+            this.persistedSetState({answers: answers, activeQuestion: this.state.activeQuestion++});
+        } else {
+            this.persistedSetState({answers: answers, activeQuestion: 0, step: STEPS.WEIGHTING});
+        }
     };
 
     renderElections = () => {
@@ -74,7 +80,7 @@ class App extends React.Component<Props, State>{
         return (
             <div>
                 <p>Questions</p>
-                <Question/>
+                <Question onAnswer={this.onAnswer} question={this.state.questions[this.state.activeQuestion]}/>
             </div>
         )
     };
@@ -108,7 +114,16 @@ class App extends React.Component<Props, State>{
             default:
                 return this.renderElections();
         }
-    }
+    };
+
+    persistedSetState = (newState) => {
+        return new Promise((resolve) => {
+            this.setState(newState, () => {
+                localStorage.setItem(SharedConstants.STORAGE_PATH, JSON.stringify(newState));
+                resolve()
+            });
+        });
+    };
 }
 
 export default App;
