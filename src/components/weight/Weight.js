@@ -22,14 +22,12 @@ class Weight extends React.Component<Props> {
 
     render = () => {
         return (
-            <div className="weight-container">
+            <section className="weight-container">
                 <button onClick={this.onWeight} className="weight-button">
                     <h2>{this.props.question.title}</h2>
                     <p>{this.props.question.text}</p>
                 </button>
-
-
-            </div>
+            </section>
         );
     }
 }
