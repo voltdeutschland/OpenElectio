@@ -12,6 +12,7 @@ type State = {
     answers: ?Array<{value: -1 | 0 | 1 | null, weighted: 0 | 1}>,
     parties: ?Array<{name: string, description: string, logoPath: string, answers: Array<{value: -1 | 0 | 1}>}>,
     step: string,
+    activeQuestion: number
 };
 
 const STEPS = {
@@ -28,14 +29,16 @@ class App extends React.Component<Props, State>{
         questions: null,
         answers: null,
         parties: null,
-        step: STEPS.ELECTIONS
+        step: STEPS.ELECTIONS,
+        activeQuestion: 0
     };
 
     componentWillMount = async () => {
-        let state = localStorage.getItem(SharedConstants.STORAGE_PATH);
+        let state: ?string = localStorage.getItem(SharedConstants.STORAGE_PATH);
         if(state){
             try {
-                await this.persistedSetState(JSON.parse(state));
+                let parsedState: State = JSON.parse(state);
+                await this.persistedSetState(parsedState);
             } catch (e) {
                 console.log(e);
             }
