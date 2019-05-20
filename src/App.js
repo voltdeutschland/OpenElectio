@@ -1,9 +1,10 @@
 // @flow
 import React from "react";
 import "./App.css";
-import Question from "./components/question/Question";
 import SharedConstants from "./constants/SharedConstants";
 import ElectionsService from "./services/ElectionsService";
+import Question from "./components/question/Question";
+import Weight from "./components/weight/Weight";
 
 import type { QuestionType } from "./typedefs/QuestionType";
 import type { AnswerType } from "./typedefs/AnswerType";
@@ -60,7 +61,7 @@ class App extends React.Component<Props, State>{
 
     onAnswer = (answer: -1 | 0 | 1 | null) => {
         let answers = this.state.answers;
-        answers[this.state.activeQuestion] = answer;
+        answers[this.state.activeQuestion] = { value: answer, weight: 1};
         if(this.state.activeQuestion < this.state.answers.length){
             this.persistedSetState({answers: answers, activeQuestion: this.state.activeQuestion++});
         } else {
@@ -68,10 +69,32 @@ class App extends React.Component<Props, State>{
         }
     };
 
+    onWeight = (questionNumber: number, weight: number) => {
+        let answers = this.state.answers;
+        answers[questionNumber][weight] = weight;
+        this.persistedSetState({answers: answers});
+    };
+
+    onElection = (electionId: string) => {
+        // todo: load everything here
+    };
+
+    onWeightingCompleted = async () => {
+        // todo: calculate result here
+        await this.persistedSetState({ step: STEPS.EVALUATION });
+    };
+
     renderElections = () => {
+        let elections = [];
+        for(let i = 0; i < this.state.elections.length; i++){
+            elections.push(<button onClick={() => this.onElection(this.state.elections[i].id) }>{this.state.elections[i].name}</button>);
+        }
         return (
             <div>
                 <p>Elections</p>
+                {
+                    elections ? elections : (<p>no elections found</p>)
+                }
             </div>
         )
     };
@@ -86,9 +109,17 @@ class App extends React.Component<Props, State>{
     };
 
     renderWeighting = () => {
+        let weights = [];
+        for(let i = 0; i < this.state.questions.length; i++){
+            weights.push(<Weight questionNumber={i} question={this.state.questions[i]} weight={this.state.questions[i].weight} onWeight={this.onWeight}/>);
+        }
         return (
             <div>
-                <p>Weighting</p>
+                <h1>Weighting</h1>
+                {
+                    weights
+                }
+                <button onClick={this.onWeightingCompleted}>weiter</button>
             </div>
         )
     };
