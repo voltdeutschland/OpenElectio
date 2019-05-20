@@ -17,6 +17,7 @@ class Question extends React.Component<Props> {
                     <h2>{this.props.question.title}</h2>
                     <p>{this.props.question.text}</p>
                 </section>
+
                 <section className="answers-container">
                     <button onClick={() => this.props.onAnswer(-1)}>nein</button>
                     <button onClick={() => this.props.onAnswer(0)}>neutral</button>
