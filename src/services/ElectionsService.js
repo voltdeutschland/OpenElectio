@@ -41,7 +41,7 @@ class ElectionsService {
      * Save the Elections in local Storage
      * @param {String} name the name for storage
      * @param {JSON} data the election json data
-     * @return {JSON} return json or null
+     * @return {Boolean} return true or false
      */
     setElectionsToStorage = (name, data) => {
         try{
@@ -49,7 +49,7 @@ class ElectionsService {
             return true;
         }catch(exception){
             console.error(exception);
-            return null;
+            return false;
         }
     }
 }
