@@ -76,7 +76,12 @@ class App extends React.Component<Props, State>{
     };
 
     onElection = (electionId: string) => {
-        // load everything here
+        // todo: load everything here
+    };
+
+    onWeightingCompleted = async () => {
+        // todo: calculate result here
+        await this.persistedSetState({ step: STEPS.EVALUATION });
     };
 
     renderElections = () => {
@@ -114,6 +119,7 @@ class App extends React.Component<Props, State>{
                 {
                     weights
                 }
+                <button onClick={this.onWeightingCompleted}>weiter</button>
             </div>
         )
     };
