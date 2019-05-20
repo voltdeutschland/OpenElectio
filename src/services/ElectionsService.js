@@ -12,11 +12,11 @@ class ElectionsService {
      * @param {String} url the path to the Election JSON
      * @return {JSON} return json or null
      */
-    getElectionsByURL = (url) => {
-        try{
+    getElectionsByURL = async (url) => {
+        try {
             let response = await fetch(url);
             return await response.json();
-        }catch(exception){
+        } catch (exception) {
             console.error(exception);
             return null;
         }
@@ -28,14 +28,14 @@ class ElectionsService {
      * @return {JSON} return json or null
      */
     getElectionsByStorage = (name) => {
-        try{
+        try {
             let storageData = localStorage.getItem(name);
             return JSON.parse(storageData);
-        }catch(exception){
+        } catch (exception) {
             console.error(exception);
             return null;
         }
-    }
+    };
 
     /**
      * Save the Elections in local Storage
@@ -44,14 +44,14 @@ class ElectionsService {
      * @return {Boolean} return true or false
      */
     setElectionsToStorage = (name, data) => {
-        try{
-            localStorage.setItem(name, JSON.stringify(storageData));
+        try {
+            localStorage.setItem(name, JSON.stringify(data));
             return true;
-        }catch(exception){
+        } catch (exception) {
             console.error(exception);
             return false;
         }
-    }
+    };
 }
 
 export default ElectionsService;
