@@ -7,7 +7,7 @@ import ElectionsService from "./services/ElectionsService";
 
 import type { QuestionType } from "./typedefs/QuestionType";
 import type { AnswerType } from "./typedefs/AnswerType";
-import type { PartiesType } from "./typedefs/PartiesType";
+import type { PartyType } from "./typedefs/PartyType";
 import type { ElectionType } from "./typedefs/ElectionType";
 
 type Props = {};
@@ -15,7 +15,7 @@ type State = {
     elections: Array<ElectionType>,
     questions: ?Array<QuestionType>,
     answers: ?Array<AnswerType>,
-    parties: ?Array<PartiesType>,
+    parties: ?Array<PartyType>,
     step: string,
     activeQuestion: number
 };
@@ -102,7 +102,7 @@ class App extends React.Component<Props, State>{
     };
 
     render = () => {
-        switch(this.state.step){
+        switch (this.state.step) {
             case STEPS.ELECTIONS:
                 return this.renderElections();
             case STEPS.QUESTIONS:
