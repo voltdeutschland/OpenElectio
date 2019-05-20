@@ -1,6 +1,19 @@
+// @flow
 import React from 'react';
 import './App.css';
+import Question from './components/question/Question';
+import SharedConstants from './constants/SharedConstants';
 import ElectionsService from './services/ElectionsService';
+
+type Props = {};
+type State = {
+    elections: Array<{id: string, name: string, description: string}>,
+    questions: ?Array<{title: string, text: string}>,
+    answers: ?Array<{value: -1 | 0 | 1 | null, weighted: 0 | 1}>,
+    parties: ?Array<{name: string, description: string, logoPath: string, answers: Array<{value: -1 | 0 | 1}>}>,
+    step: string,
+    activeQuestion: number
+};
 
 const STEPS = {
     ELECTIONS: 0,
@@ -9,59 +22,44 @@ const STEPS = {
     EVALUATION: 3,
 };
 
-class App extends React.Component {
+class App extends React.Component<Props, State>{
 
     state = {
-        /**
-         * Elections available
-         *
-         * Array<{id: string, name: string, description: string}>
-         */
         elections: [],
-
-        /**
-         * Questions
-         *
-         * ?Array<{title: string, text: string}>
-         */
         questions: null,
-
-        /**
-         * Answers
-         *
-         * ?Array<{value: -1 | 0 | 1, weighted: 0 | 1}>
-         */
         answers: null,
-
-        /**
-         * Application state
-         *
-         * number
-         */
+        parties: null,
         step: STEPS.ELECTIONS,
+        activeQuestion: 0
     };
 
-    /**
-     * Election data
-     */
-
-    /**
-     * List of competing parties in selected election
-     *
-     * -> logoPath must be valid url
-     *
-     * ?Array<{name: string, description: string, logoPath: string, answers: Array<{value: -1 | 0 | 1}>>
-     */
-    parties = null;
-
     componentWillMount = async () => {
-        let electionsService = new ElectionsService();
-        let elections = electionsService.getElections();
-        await this.setState(
-            {
-                elections: elections
+        let state: ?string = localStorage.getItem(SharedConstants.STORAGE_PATH);
+        if(state){
+            try {
+                let parsedState: State = JSON.parse(state);
+                await this.persistedSetState(parsedState);
+            } catch (e) {
+                console.log(e);
             }
-        );
+        } else {
+            let electionsService = new ElectionsService();
+            let elections = electionsService.getElections();
+            await this.setState(
+                {
+                    elections: elections
+                }
+            );
+        }
+    };
+
+    persistedSetState = (newState) => {
+        return new Promise((resolve) => {
+            this.setState(newState, () => {
+                localStorage.setItem(SharedConstants.STORAGE_PATH, JSON.stringify(newState));
+                resolve()
+            });
+        });
     };
 
     renderElections = () => {
@@ -76,6 +74,7 @@ class App extends React.Component {
         return (
             <div>
                 <p>Questions</p>
+                <Question/>
             </div>
         )
     };
