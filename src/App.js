@@ -1,9 +1,9 @@
 // @flow
-import React from 'react';
-import './App.css';
-import SharedConstants from './constants/SharedConstants';
-import ElectionsService from './services/ElectionsService';
-import Question from './components/question/Question';
+import React from "react";
+import "./App.css";
+import SharedConstants from "./constants/SharedConstants";
+import ElectionsService from "./services/ElectionsService";
+import Question from "./components/question/Question";
 import Weight from "./components/weight/Weight";
 
 import type { QuestionType } from "./typedefs/QuestionType";
