@@ -1,13 +1,47 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('./assets/img/bg1.jpg');
+  background-size: cover;
 }
+
+h1, h2, h3, h4, h5, h6, button{
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 700;
+}
+
+html, body, #root{
+  height: 100%;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.big-button{
+  padding: 32px;
+}
+
+.no-padding{
+  padding: 0!important;
+}
+
+.no-margin{
+  margin: 0!important;
+}
+
+.margin-bot-16{
+  margin-bottom: 16px!important;
+}
+
+.margin-bot-32{
+  margin-bottom: 32px!important;
+}
+
+.text-center{
+  text-align: center;
 }
