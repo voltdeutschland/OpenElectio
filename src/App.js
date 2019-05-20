@@ -9,7 +9,7 @@ type Props = {};
 type State = {
     elections: Array<{id: string, name: string, description: string}>,
     questions: ?Array<{title: string, text: string}>,
-    answers: ?Array<{value: -1 | 0 | 1 | null, weighted: 0 | 1}>,
+    answers: ?Array<{value: -1 | 0 | 1 | null, weight: number}>,
     parties: ?Array<{name: string, description: string, logoPath: string, answers: Array<{value: -1 | 0 | 1}>}>,
     step: string,
     activeQuestion: number
@@ -96,7 +96,7 @@ class App extends React.Component<Props, State>{
     };
 
     render = () => {
-        switch(this.state.step){
+        switch (this.state.step) {
             case STEPS.ELECTIONS:
                 return this.renderElections();
             case STEPS.QUESTIONS:
