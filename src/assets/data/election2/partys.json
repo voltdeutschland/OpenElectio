@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Partei 1",
+    "description": "Das ist eine sehr gute Partei",
+    "logoPath": "",
+    "answers": {},
+    "concordance": 0
+  },
+  {
+    "title": "Partei 2",
+    "description": "Das ist eine weniger gute Partei",
+    "logoPath": "",
+    "answers": {},
+    "concordance": 0
+  },
+  {
+    "title": "Partei 3",
+    "description": "Das ist eine weniger gute Partei",
+    "logoPath": "",
+    "answers": {},
+    "concordance": 0
+  },
+  {
+    "title": "Partei 4",
+    "description": "Das ist eine weniger gute Partei",
+    "logoPath": "",
+    "answers": {},
+    "concordance": 0
+  },
+  {
+    "title": "Partei 5",
+    "description": "Das ist eine weniger gute Partei",
+    "logoPath": "",
+    "answers": {},
+    "concordance": 0
+  }
+]

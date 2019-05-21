@@ -19,3 +19,11 @@
     box-shadow: 0 0 5px #cccccc;
     max-height: 90%;
 }
+
+.elections-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

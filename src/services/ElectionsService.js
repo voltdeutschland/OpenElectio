@@ -1,10 +1,38 @@
+// @flow
 /**
  * Create a instance of Elections
  *
  */
 class ElectionsService {
     getElections = () => {
-        return [{id: "abc123", name: "Test Wahl", description: "Diese Wahl ist ein Test"}];
+        return [
+            {id: "election1", name: "Test Wahl 1", description: "Diese Wahl ist ein Test mit wenig Fragen und wenig Parteien"},
+            {id: "election2", name: "Test Wahl 2", description: "Diese Wahl ist ein Test mit vielen Fragen und vielen Parteien"}
+        ];
+    };
+
+    /**
+     * implementation with dummy data
+     * @param electionId
+     */
+    getParties = (electionId: string) => {
+        if(electionId === "election1"){
+            return require('../assets/data/election1/partys');
+        } else {
+            return require('../assets/data/election2/partys');
+        }
+    };
+
+    /**
+     * implementation with dummy data
+     * @param electionId
+     */
+    getQuestions = (electionId: string) => {
+        if(electionId === "election1"){
+            return require('../assets/data/election1/questions');
+        } else {
+            return require('../assets/data/election2/questions');
+        }
     };
 
     /**

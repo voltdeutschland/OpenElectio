@@ -6,10 +6,10 @@ import ElectionsService from "./services/ElectionsService";
 import Question from "./components/question/Question";
 import Weight from "./components/weight/Weight";
 
-import type { QuestionType } from "./typedefs/QuestionType";
-import type { AnswerType } from "./typedefs/AnswerType";
-import type { PartyType } from "./typedefs/PartyType";
-import type { ElectionType } from "./typedefs/ElectionType";
+import type {QuestionType} from "./typedefs/QuestionType";
+import type {AnswerType} from "./typedefs/AnswerType";
+import type {PartyType} from "./typedefs/PartyType";
+import type {ElectionType} from "./typedefs/ElectionType";
 
 type Props = {};
 type State = {
@@ -28,7 +28,7 @@ const STEPS = {
     EVALUATION: 3,
 };
 
-class App extends React.Component<Props, State>{
+class App extends React.Component<Props, State> {
 
     state = {
         elections: [],
@@ -41,7 +41,7 @@ class App extends React.Component<Props, State>{
 
     componentWillMount = async () => {
         let state: ?string = localStorage.getItem(SharedConstants.STORAGE_PATH);
-        if(state){
+        if (state) {
             try {
                 let parsedState: State = JSON.parse(state);
                 await this.persistedSetState(parsedState);
@@ -61,34 +61,38 @@ class App extends React.Component<Props, State>{
 
     onAnswer = (answer: -1 | 0 | 1 | null) => {
         let answers = this.state.answers;
-        answers[this.state.activeQuestion] = { value: answer, weight: 1};
-        if(this.state.activeQuestion < this.state.answers.length){
-            this.persistedSetState({answers: answers, activeQuestion: this.state.activeQuestion++});
+        answers[this.state.activeQuestion] = {value: answer, weight: 1};
+        if (this.state.activeQuestion < this.state.questions.length - 1) {
+            console.log("next question");
+            this.persistedSetState({answers: answers, activeQuestion: this.state.activeQuestion + 1});
         } else {
+            console.log("go to weighting");
             this.persistedSetState({answers: answers, activeQuestion: 0, step: STEPS.WEIGHTING});
         }
     };
 
     onWeight = (questionNumber: number, weight: number) => {
         let answers = this.state.answers;
-        answers[questionNumber][weight] = weight;
+        answers[questionNumber].weight = weight;
         this.persistedSetState({answers: answers});
     };
 
-    onElection = (electionId: string) => {
-        // todo: load everything here
+    onElection = async (electionId: string) => {
+        let electionsService = new ElectionsService();
+        this.persistedSetState({answers: [], parties: await electionsService.getParties(electionId), questions: await electionsService.getQuestions(), activeQuestion: 0, step: STEPS.QUESTIONS});
     };
 
     onWeightingCompleted = async () => {
         // todo: calculate result here
-        await this.persistedSetState({ step: STEPS.EVALUATION });
+        await this.persistedSetState({step: STEPS.EVALUATION});
     };
 
     renderElections = () => {
         let elections = [];
-        for(let i = 0; i < this.state.elections.length; i++){
+        for (let i = 0; i < this.state.elections.length; i++) {
             elections.push(
-                <button key={"election" + i} className="pure-button big-button" onClick={() => this.onElection(this.state.elections[i].id) }>
+                <button key={"election" + i} className="pure-button big-button"
+                        onClick={() => this.onElection(this.state.elections[i].id)}>
                     {
                         this.state.elections[i].name
                     }
@@ -98,12 +102,16 @@ class App extends React.Component<Props, State>{
         return (
             <div className="app-inner-container">
                 <h1 className="no-margin margin-bot-16">OpenElectio</h1>
-                <p className="no-margin margin-bot-16 text-center">Herzlich Willkommen bei OpenElectio. Hier können Sie alle Parteien für die anstehenden Wahlen vergleichen.<br/>
-                Wählen Sie die gewünschte Wahl aus der folgenden Liste:</p>
-                {
-                    elections ? elections : (<p>no elections found</p>)
-                }
-                <p>Made with 💜 in Germany. <a href="https://github.com/voltdeutschland/OpenElectio">Get Open Source Code here</a></p>
+                <p className="no-margin margin-bot-16 text-center">Herzlich Willkommen bei OpenElectio. Hier können Sie
+                    alle Parteien für die anstehenden Wahlen vergleichen.<br/>
+                    Wählen Sie die gewünschte Wahl aus der folgenden Liste:</p>
+                <div className="elections-container">
+                    {
+                        elections ? elections : (<p>no elections found</p>)
+                    }
+                </div>
+                <p>Made with 💜 in Germany. <a href="https://github.com/voltdeutschland/OpenElectio">Get Open Source
+                    Code here</a></p>
             </div>
         )
     };
@@ -119,8 +127,9 @@ class App extends React.Component<Props, State>{
 
     renderWeighting = () => {
         let weights = [];
-        for(let i = 0; i < this.state.questions.length; i++){
-            weights.push(<Weight questionNumber={i} question={this.state.questions[i]} weight={this.state.questions[i].weight} onWeight={this.onWeight}/>);
+        for (let i = 0; i < this.state.questions.length; i++) {
+            weights.push(<Weight questionNumber={i} question={this.state.questions[i]}
+                                 weight={this.state.questions[i].weight} onWeight={this.onWeight}/>);
         }
         return (
             <div className="app-inner-container">
@@ -171,7 +180,7 @@ class App extends React.Component<Props, State>{
     persistedSetState = (newState) => {
         return new Promise((resolve) => {
             this.setState(newState, () => {
-                localStorage.setItem(SharedConstants.STORAGE_PATH, JSON.stringify(newState));
+                //localStorage.setItem(SharedConstants.STORAGE_PATH, JSON.stringify(newState));
                 resolve()
             });
         });
