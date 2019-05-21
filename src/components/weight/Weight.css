@@ -12,23 +12,26 @@
     outline: inherit;
     color: #333333;
     border: none;
-    border-bottom: 1px solid #bbbbbb;
     display: flex;
     margin-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
     align-self: stretch;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
 }
 
 .weighted-button{
-    background: #cccccc;
+    background: #bbbbbb;
     cursor: pointer;
     outline: inherit;
     color: #333333;
     border: none;
-    border-bottom: 1px solid #bbbbbb;
     display: flex;
     margin-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
     align-self: stretch;
     justify-content: flex-start;
     align-items: center;
@@ -40,7 +43,15 @@
     position: absolute;
     right: 16px;
     font-size: 24px;
-    color: #fff;
+    color: #333333;
+}
+
+.weight-button:after{
+    content: "x1";
+    position: absolute;
+    right: 16px;
+    font-size: 24px;
+    color: #333333;
 }
 
 .weight-button h2, .weighted-button h2{
