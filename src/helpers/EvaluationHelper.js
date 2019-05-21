@@ -18,7 +18,9 @@ class EvaluationHelper {
         for (let i = 0; i < parties.length; i++) {
             parties[i].concordance = this.evaluateParty(answers, parties[i].answers);
         }
-        return parties;
+        return parties.sort((a,b)=>{
+            return a.concordance - b.concordance
+        });
     };
 
     /**
