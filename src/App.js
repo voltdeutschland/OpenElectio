@@ -11,6 +11,7 @@ import type {QuestionType} from "./typedefs/QuestionType";
 import type {AnswerType} from "./typedefs/AnswerType";
 import type {PartyType} from "./typedefs/PartyType";
 import type {ElectionType} from "./typedefs/ElectionType";
+import EvaluationHelper from "./helpers/EvaluationHelper";
 
 type Props = {};
 type State = {
@@ -64,10 +65,8 @@ class App extends React.Component<Props, State> {
         let answers = this.state.answers;
         answers[this.state.activeQuestion] = {value: answer, weight: 1};
         if (this.state.activeQuestion < this.state.questions.length - 1) {
-            console.log("next question") ;
             this.persistedSetState({answers: answers, activeQuestion: this.state.activeQuestion + 1});
         } else {
-            console.log("go to weighting");
             this.persistedSetState({answers: answers, activeQuestion: 0, step: STEPS.WEIGHTING});
         }
     };
@@ -84,8 +83,7 @@ class App extends React.Component<Props, State> {
     };
 
     onWeightingCompleted = async () => {
-        // todo: calculate result here
-        await this.persistedSetState({step: STEPS.EVALUATION});
+        await this.persistedSetState({step: STEPS.EVALUATION, parties: EvaluationHelper.evaluateAnswers(this.state.answers, this.state.parties)});
     };
 
     renderElections = () => {
