@@ -43,245 +43,245 @@
   },
   {
     "name": "FDP",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "FREIE DEMOKRATISCHE PARTEI",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "FREIE WÄHLER",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "FREIE WÄHLER",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "PIRATEN",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Piratenpartei Deutschland",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Tierschutzpartei",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "PARTEI MENSCH UMWELT TIERSCHUTZ",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "NPD",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Nationaldemokratische Partei Deutschlands",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "FAMILIE",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Familien-Partei Deutschlands",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "ÖDP",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Ökologisch-Demokratische Partei",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Die PARTEI",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Partei für Arbeit, Rechtsstaat, Tierschutz, Elitenförderung und basisdemokratische Initiative",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Volksabstimmung",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Ab jetzt…Demokratie durch Volksabstimmung",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "BP",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Bayernpartei",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "DKP",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Deutsche Kommunistische Partei",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "MLPD",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Marxistisch-Leninistische Partei Deutschlands",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "SGP",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Sozialistische Gleichheitspartei, Vierte Internationale",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "TIERSCHUTZ hier",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Aktion Partei für Tierschutz – DAS ORIGINAL",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Tierschutzallianz",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Allianz für Menschenrechte, Tier- und Naturschutz",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Bündnis C",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Bündnis C - Christen für Deutschland",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "BIG",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Bündnis für Innovation & Gerechtigkeit",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "BGE",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Bündnis Grundeinkommen",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "DIE DIREKTE!",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Demokratie DIREKT",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "DiEM25",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Demokratie in Europa - DiEM25",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "III. Weg",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "DER DRITTE WEG",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Die Grauen",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Die Grauen – Für alle Generationen",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "DIE RECHTE",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "DIE RECHTE – Partei für Volksabstimmung, Souveränität und Heimatschutz",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "DIE VIOLETTEN",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Die Violetten",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "LIEBE",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Europäische Partei LIEBE",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "DIE FRAUEN",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Feministische Partei DIE FRAUEN",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Graue Panther",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Graue Panther",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "LKR",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "LKR",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "MENSCHLICHE WELT",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Menschliche Welt",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "NL",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Neue Liberale – Die Sozialliberalen",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "ÖkoLinX",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Ökologische Linke",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Die Humanisten",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Partei der Humanisten",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "PARTEI FÜR DIE TIERE",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "PARTEI FÜR DIE TIERE DEUTSCHLAND",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Gesundheitsforschung",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Partei für Gesundheitsforschung",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
   },
   {
     "name": "Volt",
-    "description": "Christlich Demokratische Union Deutschlands",
+    "description": "Volt Deutschland",
     "logoPath": "",
     "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
     "concordance": 0
