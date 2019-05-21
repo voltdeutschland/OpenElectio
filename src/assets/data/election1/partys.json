@@ -10,7 +10,7 @@
     "title": "Partei 2",
     "description": "Das ist eine weniger gute Partei",
     "logoPath": "",
-    "answers": [{"value": 1}, {"value": -1}],
+    "answers": [{"value": 1}, {"value": 1}],
     "concordance": 0
   }
 ]

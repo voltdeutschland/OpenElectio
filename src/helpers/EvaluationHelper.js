@@ -19,7 +19,7 @@ class EvaluationHelper {
             parties[i].concordance = this.evaluateParty(answers, parties[i].answers);
         }
         return parties.sort((a,b)=>{
-            return a.concordance - b.concordance
+            return b.concordance - a.concordance
         });
     };
 
