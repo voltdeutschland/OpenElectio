@@ -13,6 +13,9 @@ import type {PartyType} from "./typedefs/PartyType";
 import type {ElectionType} from "./typedefs/ElectionType";
 import EvaluationHelper from "./helpers/EvaluationHelper";
 
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
+
 type Props = {};
 type State = {
     elections: Array<ElectionType>,
@@ -118,7 +121,7 @@ class App extends React.Component<Props, State> {
     renderQuestions = () => {
         return (
             <div className="app-inner-container">
-                <p>Questions</p>
+                <Progress percent={ Math.round(this.state.activeQuestion / this.state.questions.length * 100) } status="active"/>
                 <Question onAnswer={this.onAnswer} question={this.state.questions[this.state.activeQuestion]}/>
             </div>
         )
