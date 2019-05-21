@@ -130,6 +130,7 @@ class App extends React.Component<Props, State> {
         let weights = [];
         for (let i = 0; i < this.state.questions.length; i++) {
             weights.push(<Weight questionNumber={i} question={this.state.questions[i]}
+                                 key={"weighting" + i}
                                  weight={this.state.questions[i].weight} onWeight={this.onWeight}/>);
         }
         return (
@@ -147,7 +148,8 @@ class App extends React.Component<Props, State> {
         // expect parties to be sorted descending by concordance
         let parties = [];
         for (let i = 0; i < this.state.parties.length; i++) {
-            parties.push(<Evaluation party={this.state.parties[i]} position={i + 1}/>)
+            parties.push(<Evaluation party={this.state.parties[i]} position={i + 1}
+                                     key={"evaluation" + i}/>)
         }
         return (
             <div className="app-inner-container">
