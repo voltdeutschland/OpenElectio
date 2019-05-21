@@ -5,6 +5,7 @@ import SharedConstants from "./constants/SharedConstants";
 import ElectionsService from "./services/ElectionsService";
 import Question from "./components/question/Question";
 import Weight from "./components/weight/Weight";
+import Evaluation from "./components/evaluation/Evaluation";
 
 import type {QuestionType} from "./typedefs/QuestionType";
 import type {AnswerType} from "./typedefs/AnswerType";
@@ -63,7 +64,7 @@ class App extends React.Component<Props, State> {
         let answers = this.state.answers;
         answers[this.state.activeQuestion] = {value: answer, weight: 1};
         if (this.state.activeQuestion < this.state.questions.length - 1) {
-            console.log("next question");
+            console.log("next question") ;
             this.persistedSetState({answers: answers, activeQuestion: this.state.activeQuestion + 1});
         } else {
             console.log("go to weighting");
@@ -143,9 +144,19 @@ class App extends React.Component<Props, State> {
     };
 
     renderEvaluation = () => {
+        // expect parties to be sorted descending by concordance
+        let parties = [];
+        for (let i = 0; i < this.state.parties.length; i++) {
+            parties.push(<Evaluation party={this.state.parties[i]} position={i + 1}/>)
+        }
         return (
             <div className="app-inner-container">
-                <p>Evaluation</p>
+                <h1>Evaluation</h1>
+                <article>
+                    {
+                        parties
+                    }
+                </article>
             </div>
         )
     };
