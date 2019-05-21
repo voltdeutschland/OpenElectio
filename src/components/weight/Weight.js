@@ -21,9 +21,10 @@ class Weight extends React.Component<Props> {
     };
 
     render = () => {
+        console.log(this.props.weight)
         return (
             <section className="weight-container">
-                <button onClick={this.onWeight} className="weight-button">
+                <button onClick={this.onWeight} className={ this.props.weight === 1 ? "weight-button" : "weighted-button"}>
                     <h2>{this.props.question.title}</h2>
                     <p>{this.props.question.text}</p>
                 </button>

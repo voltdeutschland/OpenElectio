@@ -127,13 +127,15 @@ class App extends React.Component<Props, State> {
     renderWeighting = () => {
         let weights = [];
         for (let i = 0; i < this.state.questions.length; i++) {
-            weights.push(<Weight questionNumber={i} question={this.state.questions[i]}
+            weights.push(<Weight questionNumber={i}
+                                 question={this.state.questions[i]}
                                  key={"weighting" + i}
-                                 weight={this.state.questions[i].weight} onWeight={this.onWeight}/>);
+                                 weight={this.state.answers[i].weight} onWeight={this.onWeight}/>);
         }
         return (
             <div className="app-inner-container">
-                <h1>Weighting</h1>
+                <h1>Gewichtung</h1>
+                <p className="text-center">Klicke hier die Fragen an, die dir besonders wichtig sind, um sie in der Auswertung doppelt zu gewichten.</p>
                 {
                     weights
                 }
