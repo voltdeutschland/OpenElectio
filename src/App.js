@@ -88,22 +88,33 @@ class App extends React.Component<Props, State> {
     renderElections = () => {
         let elections = [];
         for (let i = 0; i < this.state.elections.length; i++) {
-            elections.push(<button
-                onClick={() => this.onElection(this.state.elections[i].id)}>{this.state.elections[i].name}</button>);
+            elections.push(
+                <button
+                    key={"election" + i}
+                    className="pure-button big-button"
+                    onClick={() => this.onElection(this.state.elections[i].id)}>
+                    {this.state.elections[i].name}
+                </button>
+            );
         }
         return (
-            <div>
-                <p>Elections</p>
+            <div className="app-inner-container">
+                <h1 className="no-margin margin-bot-16">OpenElectio</h1>
+                <p className="no-margin margin-bot-16 text-center">Herzlich Willkommen bei OpenElectio. Hier können Sie
+                    alle Parteien für die anstehenden Wahlen vergleichen.<br/>
+                    Wählen Sie die gewünschte Wahl aus der folgenden Liste:</p>
                 {
                     elections ? elections : (<p>no elections found</p>)
                 }
+                <p>Made with 💜 in Germany. <a href="https://github.com/voltdeutschland/OpenElectio">Get Open Source
+                    Code here</a></p>
             </div>
         )
     };
 
     renderQuestions = () => {
         return (
-            <div>
+            <div className="app-inner-container">
                 <p>Questions</p>
                 <Question onAnswer={this.onAnswer} question={this.state.questions[this.state.activeQuestion]}/>
             </div>
@@ -117,12 +128,12 @@ class App extends React.Component<Props, State> {
                                  weight={this.state.questions[i].weight} onWeight={this.onWeight}/>);
         }
         return (
-            <div>
+            <div className="app-inner-container">
                 <h1>Weighting</h1>
                 {
                     weights
                 }
-                <button onClick={this.onWeightingCompleted}>weiter</button>
+                <button className="pure-button" onClick={this.onWeightingCompleted}>weiter</button>
             </div>
         )
     };
@@ -134,7 +145,7 @@ class App extends React.Component<Props, State> {
             parties.push(<Evaluation party={this.state.parties[i]} position={i + 1}/>)
         }
         return (
-            <div>
+            <div className="app-inner-container">
                 <h1>Evaluation</h1>
                 <article>
                     {
@@ -146,18 +157,30 @@ class App extends React.Component<Props, State> {
     };
 
     render = () => {
+        let content = this.renderElections();
         switch (this.state.step) {
             case STEPS.ELECTIONS:
-                return this.renderElections();
+                content = this.renderElections();
+                break;
             case STEPS.QUESTIONS:
-                return this.renderQuestions();
+                content = this.renderQuestions();
+                break;
             case STEPS.WEIGHTING:
-                return this.renderWeighting();
+                content = this.renderWeighting();
+                break;
             case STEPS.EVALUATION:
-                return this.renderEvaluation();
+                content = this.renderEvaluation();
+                break;
             default:
-                return this.renderElections();
+                content = this.renderElections();
         }
+        return (
+            <div className="app-container">
+                {
+                    content
+                }
+            </div>
+        )
     };
 
     persistedSetState = (newState) => {
