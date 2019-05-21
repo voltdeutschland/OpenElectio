@@ -3,35 +3,35 @@
     "title": "Partei 1",
     "description": "Das ist eine sehr gute Partei",
     "logoPath": "",
-    "answers": {},
+    "answers": [{"value": -1}, {"value": 1}],
     "concordance": 0
   },
   {
     "title": "Partei 2",
     "description": "Das ist eine weniger gute Partei",
     "logoPath": "",
-    "answers": {},
+    "answers": [{"value": 1}, {"value": -1}],
     "concordance": 0
   },
   {
     "title": "Partei 3",
     "description": "Das ist eine weniger gute Partei",
     "logoPath": "",
-    "answers": {},
+    "answers": [{"value": 1}, {"value": 1}],
     "concordance": 0
   },
   {
     "title": "Partei 4",
     "description": "Das ist eine weniger gute Partei",
     "logoPath": "",
-    "answers": {},
+    "answers": [{"value": -1}, {"value": -1}],
     "concordance": 0
   },
   {
     "title": "Partei 5",
     "description": "Das ist eine weniger gute Partei",
     "logoPath": "",
-    "answers": {},
+    "answers": [{"value": 0}, {"value": 0}],
     "concordance": 0
   }
 ]
