@@ -15,7 +15,7 @@
     display: flex;
     margin-bottom: 4px;
     padding-left: 16px;
-    padding-right: 16px;
+    padding-right: 60px;
     align-self: stretch;
     justify-content: flex-start;
     align-items: center;
@@ -31,7 +31,7 @@
     display: flex;
     margin-bottom: 4px;
     padding-left: 16px;
-    padding-right: 16px;
+    padding-right: 60px;
     align-self: stretch;
     justify-content: flex-start;
     align-items: center;
@@ -56,4 +56,15 @@
 
 .weight-button h2, .weighted-button h2{
     margin-right: 16px;
+    width: 200px;
+    text-align: left;
+}
+
+.weight-button p, .weighted-button p{
+    text-align: left;
+    color: #666666;
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+
 }
