@@ -11,6 +11,10 @@ import type {QuestionType} from "./typedefs/QuestionType";
 import type {AnswerType} from "./typedefs/AnswerType";
 import type {PartyType} from "./typedefs/PartyType";
 import type {ElectionType} from "./typedefs/ElectionType";
+import EvaluationHelper from "./helpers/EvaluationHelper";
+
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
 
 type Props = {};
 type State = {
@@ -63,8 +67,8 @@ class App extends React.Component<Props, State> {
     onAnswer = (answer: -1 | 0 | 1 | null) => {
         let answers = this.state.answers;
         answers[this.state.activeQuestion] = {value: answer, weight: 1};
-        if (this.state.activeQuestion < this.state.answers.length) {
-            this.persistedSetState({answers: answers, activeQuestion: this.state.activeQuestion++});
+        if (this.state.activeQuestion < this.state.questions.length - 1) {
+            this.persistedSetState({answers: answers, activeQuestion: this.state.activeQuestion + 1});
         } else {
             this.persistedSetState({answers: answers, activeQuestion: 0, step: STEPS.WEIGHTING});
         }
@@ -72,28 +76,28 @@ class App extends React.Component<Props, State> {
 
     onWeight = (questionNumber: number, weight: number) => {
         let answers = this.state.answers;
-        answers[questionNumber][weight] = weight;
+        answers[questionNumber].weight = weight;
         this.persistedSetState({answers: answers});
     };
 
-    onElection = (electionId: string) => {
-        // todo: load everything here
+    onElection = async (electionId: string) => {
+        let electionsService = new ElectionsService();
+        this.persistedSetState({answers: [], parties: await electionsService.getParties(electionId), questions: await electionsService.getQuestions(), activeQuestion: 0, step: STEPS.QUESTIONS});
     };
 
     onWeightingCompleted = async () => {
-        // todo: calculate result here
-        await this.persistedSetState({step: STEPS.EVALUATION});
+        await this.persistedSetState({step: STEPS.EVALUATION, parties: EvaluationHelper.evaluateAnswers(this.state.answers, this.state.parties)});
     };
 
     renderElections = () => {
         let elections = [];
         for (let i = 0; i < this.state.elections.length; i++) {
             elections.push(
-                <button
-                    key={"election" + i}
-                    className="pure-button big-button"
-                    onClick={() => this.onElection(this.state.elections[i].id)}>
-                    {this.state.elections[i].name}
+                <button key={"election" + i} className="pure-button big-button"
+                        onClick={() => this.onElection(this.state.elections[i].id)}>
+                    {
+                        this.state.elections[i].name
+                    }
                 </button>
             );
         }
@@ -103,9 +107,11 @@ class App extends React.Component<Props, State> {
                 <p className="no-margin margin-bot-16 text-center">Herzlich Willkommen bei OpenElectio. Hier können Sie
                     alle Parteien für die anstehenden Wahlen vergleichen.<br/>
                     Wählen Sie die gewünschte Wahl aus der folgenden Liste:</p>
-                {
-                    elections ? elections : (<p>no elections found</p>)
-                }
+                <div className="elections-container">
+                    {
+                        elections ? elections : (<p>no elections found</p>)
+                    }
+                </div>
                 <p>Made with 💜 in Germany. <a href="https://github.com/voltdeutschland/OpenElectio">Get Open Source
                     Code here</a></p>
             </div>
@@ -115,7 +121,7 @@ class App extends React.Component<Props, State> {
     renderQuestions = () => {
         return (
             <div className="app-inner-container">
-                <p>Questions</p>
+                <Progress percent={ Math.round(this.state.activeQuestion / this.state.questions.length * 100) } status="active"/>
                 <Question onAnswer={this.onAnswer} question={this.state.questions[this.state.activeQuestion]}/>
             </div>
         )
@@ -124,12 +130,15 @@ class App extends React.Component<Props, State> {
     renderWeighting = () => {
         let weights = [];
         for (let i = 0; i < this.state.questions.length; i++) {
-            weights.push(<Weight questionNumber={i} question={this.state.questions[i]}
-                                 weight={this.state.questions[i].weight} onWeight={this.onWeight}/>);
+            weights.push(<Weight questionNumber={i}
+                                 question={this.state.questions[i]}
+                                 key={"weighting" + i}
+                                 weight={this.state.answers[i].weight} onWeight={this.onWeight}/>);
         }
         return (
             <div className="app-inner-container">
-                <h1>Weighting</h1>
+                <h1>Gewichtung</h1>
+                <p className="text-center">Klicke hier die Fragen an, die dir besonders wichtig sind, um sie in der Auswertung doppelt zu gewichten.</p>
                 {
                     weights
                 }
@@ -142,7 +151,8 @@ class App extends React.Component<Props, State> {
         // expect parties to be sorted descending by concordance
         let parties = [];
         for (let i = 0; i < this.state.parties.length; i++) {
-            parties.push(<Evaluation party={this.state.parties[i]} position={i + 1}/>)
+            parties.push(<Evaluation party={this.state.parties[i]} position={i + 1}
+                                     key={"evaluation" + i}/>)
         }
         return (
             <div className="app-inner-container">
@@ -186,7 +196,7 @@ class App extends React.Component<Props, State> {
     persistedSetState = (newState) => {
         return new Promise((resolve) => {
             this.setState(newState, () => {
-                localStorage.setItem(SharedConstants.STORAGE_PATH, JSON.stringify(newState));
+                //localStorage.setItem(SharedConstants.STORAGE_PATH, JSON.stringify(newState));
                 resolve()
             });
         });

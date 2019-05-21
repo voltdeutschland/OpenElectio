@@ -19,11 +19,11 @@ class Question extends React.Component<Props> {
                 </section>
 
                 <section className="answers-container">
-                    <button onClick={() => this.props.onAnswer(-1)}>nein</button>
-                    <button onClick={() => this.props.onAnswer(0)}>neutral</button>
-                    <button onClick={() => this.props.onAnswer(1)}>ja</button>
-                    <button onClick={() => this.props.onAnswer(null)}>überspringen</button>
+                    <button className="pure-button question-button" onClick={() => this.props.onAnswer(-1)}>nein</button>
+                    <button className="pure-button question-button" onClick={() => this.props.onAnswer(0)}>neutral</button>
+                    <button className="pure-button question-button" onClick={() => this.props.onAnswer(1)}>ja</button>
                 </section>
+                    <button className="small-button" onClick={() => this.props.onAnswer(null)}>überspringen</button>
             </article>
         );
     }

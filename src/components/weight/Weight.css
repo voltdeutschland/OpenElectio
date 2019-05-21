@@ -3,8 +3,57 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-self: stretch;
 }
 
 .weight-button{
+    background: #eeeeee;
+    cursor: pointer;
+    outline: inherit;
+    color: #333333;
+    border: none;
+    display: flex;
+    margin-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
 
+.weighted-button{
+    background: #bbbbbb;
+    cursor: pointer;
+    outline: inherit;
+    color: #333333;
+    border: none;
+    display: flex;
+    margin-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.weighted-button:after{
+    content: "x2";
+    position: absolute;
+    right: 16px;
+    font-size: 24px;
+    color: #333333;
+}
+
+.weight-button:after{
+    content: "x1";
+    position: absolute;
+    right: 16px;
+    font-size: 24px;
+    color: #333333;
+}
+
+.weight-button h2, .weighted-button h2{
+    margin-right: 16px;
 }
