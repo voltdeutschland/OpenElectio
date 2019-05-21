@@ -13,7 +13,7 @@ import type {PartyType} from "./typedefs/PartyType";
 import type {ElectionType} from "./typedefs/ElectionType";
 import EvaluationHelper from "./helpers/EvaluationHelper";
 
-import { Progress } from 'react-sweet-progress';
+import {Progress} from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 
 type Props = {};
@@ -81,12 +81,22 @@ class App extends React.Component<Props, State> {
     };
 
     onElection = async (electionId: string) => {
+        console.log(electionId);
         let electionsService = new ElectionsService();
-        this.persistedSetState({answers: [], parties: await electionsService.getParties(electionId), questions: await electionsService.getQuestions(), activeQuestion: 0, step: STEPS.QUESTIONS});
+        this.persistedSetState({
+            answers: [],
+            parties: await electionsService.getParties(electionId),
+            questions: await electionsService.getQuestions(electionId),
+            activeQuestion: 0,
+            step: STEPS.QUESTIONS
+        });
     };
 
     onWeightingCompleted = async () => {
-        await this.persistedSetState({step: STEPS.EVALUATION, parties: EvaluationHelper.evaluateAnswers(this.state.answers, this.state.parties)});
+        await this.persistedSetState({
+            step: STEPS.EVALUATION,
+            parties: EvaluationHelper.evaluateAnswers(this.state.answers, this.state.parties)
+        });
     };
 
     renderElections = () => {
@@ -103,7 +113,7 @@ class App extends React.Component<Props, State> {
         }
         return (
             <div className="app-inner-container">
-                <h1 className="no-margin margin-bot-16">OpenElectio</h1>
+                <h1 className="no-margin margin-bot-16 text-center">OpenElectio</h1>
                 <p className="no-margin margin-bot-16 text-center">Herzlich Willkommen bei OpenElectio. Hier können Sie
                     alle Parteien für die anstehenden Wahlen vergleichen.<br/>
                     Wählen Sie die gewünschte Wahl aus der folgenden Liste:</p>
@@ -112,8 +122,10 @@ class App extends React.Component<Props, State> {
                         elections ? elections : (<p>no elections found</p>)
                     }
                 </div>
-                <p>Made with 💜 in Germany. <a href="https://github.com/voltdeutschland/OpenElectio">Get Open Source
+                <p className="text-center">Made with 💜 in Germany. <a
+                    href="https://github.com/voltdeutschland/OpenElectio" target="_blank">Get Open Source
                     Code here</a></p>
+                <p className="text-center">Alle Wahlen und Antworten sind frei erfunden.</p>
             </div>
         )
     };
@@ -121,7 +133,8 @@ class App extends React.Component<Props, State> {
     renderQuestions = () => {
         return (
             <div className="app-inner-container">
-                <Progress percent={ Math.round(this.state.activeQuestion / this.state.questions.length * 100) } status="active"/>
+                <Progress percent={Math.round(this.state.activeQuestion / this.state.questions.length * 100)}
+                          status="active"/>
                 <Question onAnswer={this.onAnswer} question={this.state.questions[this.state.activeQuestion]}/>
             </div>
         )
@@ -137,12 +150,15 @@ class App extends React.Component<Props, State> {
         }
         return (
             <div className="app-inner-container">
-                <h1>Gewichtung</h1>
-                <p className="text-center">Klicke hier die Fragen an, die dir besonders wichtig sind, um sie in der Auswertung doppelt zu gewichten.</p>
+                <h1 className="text-center">Gewichtung</h1>
+                <p className="text-center">Klicke hier die Fragen an, die dir besonders wichtig sind, um sie in der
+                    Auswertung doppelt zu gewichten.</p>
                 {
                     weights
                 }
-                <button className="pure-button" onClick={this.onWeightingCompleted}>weiter</button>
+                <div className="button-container">
+                    <button className="pure-button" onClick={this.onWeightingCompleted}>weiter</button>
+                </div>
             </div>
         )
     };
@@ -156,12 +172,19 @@ class App extends React.Component<Props, State> {
         }
         return (
             <div className="app-inner-container">
-                <h1>Evaluation</h1>
-                <article>
+                <h1 className="text-center">Auswertung</h1>
+                <article className="parties-container">
                     {
                         parties
                     }
                 </article>
+                <div className="button-container">
+                    <button className="pure-button" onClick={() => {
+                        this.setState({step: STEPS.ELECTIONS, questions: null, answers: null})
+                    }}>
+                        Neustart
+                    </button>
+                </div>
             </div>
         )
     };
