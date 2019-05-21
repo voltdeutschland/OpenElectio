@@ -3,287 +3,287 @@
     "name": "CDU",
     "description": "Christlich Demokratische Union Deutschlands",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": -1},{"value": 0},{"value": 0},{"value": 0},{"value": 0},{"value": 1},{"value": 0},{"value": 1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "SPD",
     "description": "Sozialdemokratische Partei Deutschlands",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 1},{"value": 0},{"value": 0},{"value": 0},{"value": 1},{"value": 0},{"value": 1},{"value": -1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "GRÜNE",
     "description": "BÜNDNIS 90/DIE GRÜNEN",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 1},{"value": 0},{"value": 1},{"value": 0},{"value": 0},{"value": 0},{"value": 0},{"value": 0},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "DIE LINKE",
     "description": "DIE LINKE",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 1},{"value": 1},{"value": -1},{"value": 1},{"value": -1},{"value": 1},{"value": 0},{"value": 1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "AfD",
     "description": "Alternative für Deutschland",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": -1},{"value": 1},{"value": 1},{"value": 0},{"value": -1},{"value": 0},{"value": 0},{"value": 0},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "CSU",
     "description": "Christlich-Soziale Union in Bayern",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": 1},{"value": 0},{"value": 0},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "FDP",
     "description": "FREIE DEMOKRATISCHE PARTEI",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 1},{"value": 0},{"value": -1},{"value": 1},{"value": 1},{"value": 0},{"value": 0},{"value": 1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "FREIE WÄHLER",
     "description": "FREIE WÄHLER",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": -1},{"value": -1},{"value": 0},{"value": 1},{"value": -1},{"value": -1},{"value": 0},{"value": -1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "PIRATEN",
     "description": "Piratenpartei Deutschland",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 1},{"value": -1},{"value": 0},{"value": 0},{"value": -1},{"value": 0},{"value": 0},{"value": 1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "Tierschutzpartei",
     "description": "PARTEI MENSCH UMWELT TIERSCHUTZ",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": -1},{"value": 0},{"value": 0},{"value": 0},{"value": -1},{"value": 0},{"value": -1},{"value": 1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "NPD",
     "description": "Nationaldemokratische Partei Deutschlands",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": -1},{"value": -1},{"value": 0},{"value": -1},{"value": 0},{"value": 1},{"value": -1},{"value": -1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "FAMILIE",
     "description": "Familien-Partei Deutschlands",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 0},{"value": -1},{"value": -1},{"value": 1},{"value": 0},{"value": 0},{"value": -1},{"value": 0},{"value": 0},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "ÖDP",
     "description": "Ökologisch-Demokratische Partei",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 0},{"value": -1},{"value": -1},{"value": 0},{"value": 1},{"value": -1},{"value": 0},{"value": 0},{"value": 1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "Die PARTEI",
     "description": "Partei für Arbeit, Rechtsstaat, Tierschutz, Elitenförderung und basisdemokratische Initiative",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 1},{"value": -1},{"value": 0},{"value": -1},{"value": -1},{"value": 0},{"value": -1},{"value": 1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "Volksabstimmung",
     "description": "Ab jetzt…Demokratie durch Volksabstimmung",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 0},{"value": -1},{"value": 1},{"value": 1},{"value": 0},{"value": 1},{"value": -1},{"value": 0},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "BP",
     "description": "Bayernpartei",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": 0},{"value": 0},{"value": -1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "DKP",
     "description": "Deutsche Kommunistische Partei",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "MLPD",
     "description": "Marxistisch-Leninistische Partei Deutschlands",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 0},{"value": -1},{"value": -1},{"value": 0},{"value": 1},{"value": 1},{"value": 1},{"value": 0},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "SGP",
     "description": "Sozialistische Gleichheitspartei, Vierte Internationale",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 1},{"value": 1},{"value": -1},{"value": -1},{"value": 0},{"value": 0},{"value": -1},{"value": 0},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "TIERSCHUTZ hier",
     "description": "Aktion Partei für Tierschutz – DAS ORIGINAL",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 0},{"value": -1},{"value": 1},{"value": -1},{"value": 1},{"value": -1},{"value": 0},{"value": 0},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "Tierschutzallianz",
     "description": "Allianz für Menschenrechte, Tier- und Naturschutz",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 1},{"value": 1},{"value": 0},{"value": 0},{"value": 1},{"value": 0},{"value": -1},{"value": 1},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "Bündnis C",
     "description": "Bündnis C - Christen für Deutschland",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 0},{"value": 0},{"value": -1},{"value": 0},{"value": 0},{"value": -1},{"value": 1},{"value": 1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "BIG",
     "description": "Bündnis für Innovation & Gerechtigkeit",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 1},{"value": 1},{"value": 0},{"value": 0},{"value": 1},{"value": 0},{"value": 0},{"value": 0},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "BGE",
     "description": "Bündnis Grundeinkommen",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 0},{"value": -1},{"value": 1},{"value": 1},{"value": 0},{"value": -1},{"value": -1},{"value": 0},{"value": 0},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "DIE DIREKTE!",
     "description": "Demokratie DIREKT",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 1},{"value": -1},{"value": -1},{"value": 0},{"value": 0},{"value": 0},{"value": -1},{"value": 0},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "DiEM25",
     "description": "Demokratie in Europa - DiEM25",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 1},{"value": 1},{"value": 0},{"value": 0},{"value": 0},{"value": 1},{"value": 0},{"value": 0},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "III. Weg",
     "description": "DER DRITTE WEG",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 0},{"value": 1},{"value": -1},{"value": -1},{"value": 1},{"value": 0},{"value": -1},{"value": 1},{"value": 1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "Die Grauen",
     "description": "Die Grauen – Für alle Generationen",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 0},{"value": 1},{"value": 1},{"value": 0},{"value": -1},{"value": 0},{"value": -1},{"value": 0},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "DIE RECHTE",
     "description": "DIE RECHTE – Partei für Volksabstimmung, Souveränität und Heimatschutz",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 0},{"value": 1},{"value": 0},{"value": 0},{"value": -1},{"value": -1},{"value": 1},{"value": 1},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "DIE VIOLETTEN",
     "description": "Die Violetten",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 0},{"value": 0},{"value": 1},{"value": 1},{"value": 1},{"value": 1},{"value": 1},{"value": -1},{"value": 1},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "LIEBE",
     "description": "Europäische Partei LIEBE",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 0},{"value": -1},{"value": -1},{"value": 1},{"value": 0},{"value": -1},{"value": 1},{"value": 1},{"value": -1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "DIE FRAUEN",
     "description": "Feministische Partei DIE FRAUEN",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": -1},{"value": 0},{"value": 0},{"value": 0},{"value": -1},{"value": 0},{"value": 1},{"value": 0},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "Graue Panther",
     "description": "Graue Panther",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 1},{"value": -1},{"value": 1},{"value": 0},{"value": 0},{"value": 1},{"value": -1},{"value": -1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "LKR",
     "description": "LKR",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": -1},{"value": 1},{"value": -1},{"value": -1},{"value": 0},{"value": 0},{"value": 0},{"value": 1},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "MENSCHLICHE WELT",
     "description": "Menschliche Welt",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": 1},{"value": 1},{"value": 1},{"value": -1},{"value": -1},{"value": 1},{"value": 1},{"value": 0},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "NL",
     "description": "Neue Liberale – Die Sozialliberalen",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 1},{"value": -1},{"value": -1},{"value": -1},{"value": 1},{"value": -1},{"value": 0},{"value": -1},{"value": 1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "ÖkoLinX",
     "description": "Ökologische Linke",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": -1},{"value": -1},{"value": -1},{"value": 1},{"value": 1},{"value": 1},{"value": 0},{"value": 1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "Die Humanisten",
     "description": "Partei der Humanisten",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 0},{"value": -1},{"value": 0},{"value": 1},{"value": -1},{"value": -1},{"value": -1},{"value": 1},{"value": 1},{"value": 1}],
     "concordance": 0
   },
   {
     "name": "PARTEI FÜR DIE TIERE",
     "description": "PARTEI FÜR DIE TIERE DEUTSCHLAND",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": 0},{"value": -1},{"value": -1},{"value": 0},{"value": 0},{"value": 0},{"value": 1},{"value": 0},{"value": 1},{"value": 0}],
     "concordance": 0
   },
   {
     "name": "Gesundheitsforschung",
     "description": "Partei für Gesundheitsforschung",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 0},{"value": 0},{"value": -1},{"value": -1},{"value": 0},{"value": 1},{"value": -1},{"value": 1},{"value": -1}],
     "concordance": 0
   },
   {
     "name": "Volt",
     "description": "Volt Deutschland",
     "logoPath": "",
-    "answers": [{"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}, {"value": 0}],
+    "answers": [{"value": -1},{"value": 1},{"value": 0},{"value": -1},{"value": 0},{"value": 0},{"value": 0},{"value": -1},{"value": 0},{"value": -1}],
     "concordance": 0
   }
 ]
