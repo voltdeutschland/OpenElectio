@@ -1,19 +1,73 @@
 .evaluation-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.evaluation-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+}
+
+.evaluation-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+}
+
+.evaluation-question-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
 .evaluation-data {
-    flex: 4;
+    flex: 3;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
 
+.evaluation-info button{
+    margin-left: 15px;
+    width: 100px;
+}
+
+.evaluation-question{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+}
+
+
+.evaluation-data h2{
+    font-size: 22px;
 }
 
 .evaluation-progress {
-    flex: 8;
+    flex: 4;
+}
+
+
+@media (max-width: 920px){
+
+    .evaluation-data {
+        flex: 3;
+    }
+
+    .evaluation-data h2{
+        font-size: 16px;
+    }
+
+    .evaluation-progress {
+        flex: 2;
+    }
 }

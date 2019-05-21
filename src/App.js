@@ -81,7 +81,6 @@ class App extends React.Component<Props, State> {
     };
 
     onElection = async (electionId: string) => {
-        console.log(electionId);
         let electionsService = new ElectionsService();
         this.persistedSetState({
             answers: [],
@@ -125,7 +124,7 @@ class App extends React.Component<Props, State> {
                 <p className="text-center">Made with 💜 in Germany. <a
                     href="https://github.com/voltdeutschland/OpenElectio" target="_blank">Get Open Source
                     Code here</a></p>
-                <p className="text-center">Alle Wahlen und Antworten sind frei erfunden.</p>
+                <p className="text-center disclaimer-text">Das ist eine Demo. Alle Wahlen und Antworten sind frei erfunden.</p>
             </div>
         )
     };
@@ -167,7 +166,10 @@ class App extends React.Component<Props, State> {
         // expect parties to be sorted descending by concordance
         let parties = [];
         for (let i = 0; i < this.state.parties.length; i++) {
-            parties.push(<Evaluation party={this.state.parties[i]} position={i + 1}
+            parties.push(<Evaluation party={this.state.parties[i]}
+                                     questions={this.state.questions}
+                                     answers={this.state.answers}
+                                     position={i + 1}
                                      key={"evaluation" + i}/>)
         }
         return (

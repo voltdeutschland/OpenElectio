@@ -6,8 +6,8 @@
 class ElectionsService {
     getElections = () => {
         return [
-            {id: "election1", name: "Realistische Wahl", description: "Diese Wahl ist ein Test mit vielen Fragen und vielen Parteien"},
-            {id: "election2", name: "Test Wahl 2", description: "Diese Wahl ist ein Test mit wenigen Fragen und wenigen Parteien"}
+            {id: "election1", name: "Test-Wahl", description: "Diese Wahl ist ein Test mit vielen Fragen und vielen Parteien"},
+            {id: "election2", name: "Europawahl 2019", description: "Diese Wahl ist ein Test mit wenigen Fragen und wenigen Parteien"}
         ];
     };
 

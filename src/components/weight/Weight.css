@@ -58,13 +58,32 @@
     margin-right: 16px;
     width: 200px;
     text-align: left;
+    font-size: 16px;
 }
 
 .weight-button p, .weighted-button p{
     text-align: left;
     color: #666666;
     font-family: "Open Sans", sans-serif !important;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
 
+}
+
+
+
+
+@media (max-width: 920px){
+
+    .weight-button h2, .weighted-button h2{
+        font-size: 13px;
+        width: 120px;
+        display: flex;
+        flex: 3;
+    }
+    .weight-button p, .weighted-button p{
+        font-size: 12px;
+        display: flex;
+        flex: 4;
+    }
 }

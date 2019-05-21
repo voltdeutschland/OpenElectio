@@ -1,10 +1,40 @@
 [
-  {
-    "title": "Frage 1",
-    "text": "Das ist eine Test Frage"
-  },
-  {
-    "title": "Frage 2",
-    "text": "Das ist eine Test Frage"
-  }
+  {"title":"EU-weite Bürgerentscheide", "text":"Es sollen EU-weite verbindliche Bürgerentscheide eingeführt werden."},
+  {"title":"CO2-Ausstoß", "text":"Die EU soll sich höhere Ziele zur Reduzierung des CO2-Ausstoßes setzen."},
+  {"title":"Europäische Armee", "text":"Die EU-Mitgliedsstaaten sollen eine gemeinsame Armee aufbauen."},
+  {"title":"Landwirtschaftsförderung", "text":"Die Europäische Union soll vorrangig Bio-Landwirtschaft fördern."},
+  {"title":"Nationale Währung", "text":"Deutschland soll an Stelle des Euro wieder eine nationale Währung einführen."},
+  {"title":"Seenotrettung im Mittelmeer", "text":"Die EU soll private Seenotrettungsinitiativen im Mittelmeer unterstützen."},
+  {"title":"Finanztransaktionssteuer", "text":"Auf den Handel mit Finanzprodukten (z.B. Aktien) soll eine Steuer erhoben werden."},
+  {"title":"Gentechnisch veränderte Pflanzen", "text":"Der Anbau von gentechnisch veränderten Pflanzen soll in der EU erlaubt sein."},
+  {"title":"Sozialleistungen in der EU", "text":"EU-Bürgerinnen und -Bürger, die in ein anderes EU-Land ziehen, sollen dort nur eingeschränkt Sozialleistungen erhalten."},
+  {"title":"Stimmabgabe bei der Europawahl", "text":"EU-Bürgerinnen und -Bürger sollen bei der Europawahl ihre Stimme auch für Parteien aus anderen Mitgliedsstaaten abgeben dürfen."},
+  {"title":"Europäische Entwicklungshilfe", "text":"Die EU soll mehr Geld für die Entwicklungshilfe bereitstellen."},
+  {"title":"Fluggastdaten", "text":"Die EU-Mitgliedsstaaten sollen weiterhin Daten von Fluggästen speichern müssen."},
+  {"title":"Mindestlohn", "text":"Die EU soll sich für die Einführung eines nationalen Mindestlohns in allen Mitgliedsstaaten einsetzen."},
+  {"title":"Flüchtlingsabkommen mit der Türkei", "text":"Die EU soll am Flüchtlingsabkommen mit der Türkei festhalten."},
+  {"title":"Frauenquote", "text":"In der EU soll es für Aufsichtsräte von Unternehmen eine verbindliche Frauenquote geben."},
+  {"title":"Austritt aus der EU", "text":"Deutschland soll aus der Europäischen Union austreten."},
+  {"title":"Atomkraftwerke", "text":"In anderen EU-Staaten sollen weiterhin Atomkraftwerke betrieben werden dürfen."},
+  {"title":"Zuwanderung von Fachkräften", "text":"Die Europäische Union soll Zuwanderung von Fachkräften aus Nicht-EU-Ländern fördern."},
+  {"title":"Presse- und Medienfreiheit", "text":"Die EU soll Mitgliedsstaaten finanziell bestrafen, die die Presse- und Medienfreiheit verletzen."},
+  {"title":"Reduzierung der Regionalförderung", "text":"Die finanziellen Hilfen für wirtschaftlich schwächere Regionen in der EU sollen reduziert werden."},
+  {"title":"Tierversuche", "text":"In der medizinischen Forschung sollen Tierversuche weiterhin erlaubt sein."},
+  {"title":"Europol", "text":"Die europäische Polizeibehörde Europol soll weitere Kompetenzen erhalten."},
+  {"title":"Mindestsatz für Besteuerung", "text":"Für die Besteuerung von Unternehmen soll es einen EU-weiten Mindestsatz geben."},
+  {"title":"Gleichgeschlechtliche Ehe", "text":"Die EU soll sich dafür einsetzen, dass alle Mitgliedsstaaten die gleichgeschlechtliche Ehe einführen."},
+  {"title":"EU-Regeln zur Staatsverschuldung", "text":"Mitgliedsstaaten, die die EU-Regeln zur Begrenzung der Staatsverschuldung verletzen, sollen konsequent bestraft werden."},
+  {"title":"Lkw-Maut auf Fernstraßen", "text":"In allen Mitgliedsstaaten soll eine Lkw-Maut auf Fernstraßen eingeführt werden."},
+  {"title":"Christliche Wertegemeinschaft", "text":"Die Europäische Union soll sich als christliche Wertegemeinschaft verstehen."},
+  {"title":"Verstaatlichung der Banken", "text":"Alle Banken sollen verstaatlicht werden."},
+  {"title":"Migration über das Mittelmeer", "text":"Alle Asylsuchenden, die versuchen über das Mittelmeer in die EU zu gelangen, sollen in ihre Heimatländer zurückgeführt werden."},
+  {"title":"Abbau der Russland-Sanktionen", "text":"Die EU soll ihre Sanktionen gegen Russland abbauen."},
+  {"title":"Steuer auf Plastikverpackungen", "text":"In allen EU-Mitgliedsstaaten sollen Plastikverpackungen besteuert werden."},
+  {"title":"Initiativen gegen Antisemitismus", "text":"In der EU sollen Initiativen gegen Antisemitismus finanziell unterstützt werden."},
+  {"title":"Außenpolitische Entscheidungen", "text":"Bei außenpolitischen Entscheidungen der EU soll häufiger mit Mehrheit statt einstimmig entschieden werden können."},
+  {"title":"Verteilung von Asylsuchenden", "text":"Asylsuchende sollen in der EU proportional auf die Mitgliedsstaaten verteilt werden."},
+  {"title":"Fischfangmenge", "text":"Die Fangmengen für die europäische Fischerei sollen stärker begrenzt werden."},
+  {"title":"Grenzkontrollen innerhalb der EU", "text":"Es sollen wieder dauerhafte Grenzkontrollen zwischen den Mitgliedsstaaten der EU stattfinden."},
+  {"title":"Europäischer Bundesstaat", "text":"Die EU soll sich langfristig zu einem europäischen Bundesstaat entwickeln."},
+  {"title":"Wählen ab 16", "text":"Jugendliche sollen ab 16 Jahren bei der Europawahl wählen dürfen."}
 ]

@@ -8,12 +8,14 @@
 
 .app-inner-container {
     padding: 32px;
-    width: 100%;
+    width: calc(100% - 64px);
     max-width: 900px;
     background: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 5px #cccccc;
     overflow: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .elections-container{
@@ -33,6 +35,17 @@
     justify-content: center;
 }
 
+.disclaimer-text{
+    color: red;
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+}
+
+.parties-container:nth-child("even"){
+    background: #f8f8f8;
+}
+
 article{
     flex: 1;
     display: flex;
@@ -40,3 +53,15 @@ article{
     align-self: stretch;
 }
 
+@media (max-width: 920px){
+
+    .app-container{
+        background: #ffffff;
+    }
+
+    .app-inner-container {
+        margin-top: 0;
+        margin-bottom: 0;
+        box-shadow: none;
+    }
+}
