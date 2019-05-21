@@ -124,7 +124,7 @@ class App extends React.Component<Props, State> {
                 <p className="text-center">Made with 💜 in Germany. <a
                     href="https://github.com/voltdeutschland/OpenElectio" target="_blank">Get Open Source
                     Code here</a></p>
-                <p className="text-center disclaimer-text">Das ist eine Demo. Alle Wahlen und Antworten sind frei erfunden.</p>
+                <p className="text-center disclaimer-text">Das ist eine Demo.</p>
             </div>
         )
     };
