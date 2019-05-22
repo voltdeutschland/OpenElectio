@@ -18,12 +18,22 @@ type State = {
     open: boolean
 }
 
+
+/**
+ * Evaluate object
+ */
 class Evaluation extends React.Component<Props, State> {
 
     state = {
         open: false
     };
 
+
+    /**
+     * render with the position from evaluate
+     * @param {Number} position - the position from the Evaluation
+     * @return {HTML}
+     */
     renderPositions = (position: number) => {
         let you = "";
         if(this.props.answers[position].value === -1){
@@ -48,6 +58,11 @@ class Evaluation extends React.Component<Props, State> {
         )
     };
 
+
+    /**
+     * renderDescription - render the evaluation description
+     * @return {HTML}
+     */
     renderDescription = () => {
         if(this.state.open){
             let questions = [];
@@ -75,6 +90,11 @@ class Evaluation extends React.Component<Props, State> {
         }
     };
 
+
+    /**
+     * render - render the element
+     * @return {HTML}
+     */
     render = () => {
         return (
             <section className="evaluation-container" key={"party_" + this.props.position}>
