@@ -8,8 +8,16 @@ type Props = {
     onAnswer: (answer: -1 | 0 | 1 | null) => mixed
 };
 
+
+/**
+ * The question Component
+ */
 class Question extends React.Component<Props> {
 
+    /**
+     *  Render the Question element
+     * @return {HTML}
+     */
     render = () => {
         return (
             <article className="question-outer-container">

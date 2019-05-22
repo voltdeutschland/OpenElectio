@@ -13,7 +13,7 @@ import type {PartyType} from "./typedefs/PartyType";
 import type {ElectionType} from "./typedefs/ElectionType";
 import EvaluationHelper from "./helpers/EvaluationHelper";
 
-import {Progress} from 'react-sweet-progress';
+import {Progress} from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
 
 type Props = {};
@@ -33,6 +33,10 @@ const STEPS = {
     EVALUATION: 3,
 };
 
+
+/**
+ * The Basic App
+ */
 class App extends React.Component<Props, State> {
 
     state = {
@@ -44,6 +48,10 @@ class App extends React.Component<Props, State> {
         activeQuestion: 0
     };
 
+
+    /**
+     * componentWillMount - Called whenever an App component will be mounted
+     */
     componentWillMount = async () => {
         let state: ?string = localStorage.getItem(SharedConstants.STORAGE_PATH);
         if (state) {
@@ -51,7 +59,7 @@ class App extends React.Component<Props, State> {
                 let parsedState: State = JSON.parse(state);
                 await this.persistedSetState(parsedState);
             } catch (e) {
-                console.log(e);
+                console.error(e);
             }
         } else {
             let electionsService = new ElectionsService();
@@ -64,6 +72,10 @@ class App extends React.Component<Props, State> {
         }
     };
 
+    /**
+     * onAnswer - evaluate answer
+     * @param {Integer} answer - -1 = no, 0 = neutral, 1 = yes and null = do not calculate the answer
+     */
     onAnswer = (answer: -1 | 0 | 1 | null) => {
         let answers = this.state.answers;
         answers[this.state.activeQuestion] = {value: answer, weight: 1};
@@ -74,12 +86,23 @@ class App extends React.Component<Props, State> {
         }
     };
 
+
+    /**
+     * onWeight - set question weight
+     * @param {Number} questionNumber - The question id to set the weight
+     * @param {Number} weight - the weight to set
+     */
     onWeight = (questionNumber: number, weight: number) => {
         let answers = this.state.answers;
         answers[questionNumber].weight = weight;
         this.persistedSetState({answers: answers});
     };
 
+
+    /**
+     * onElection - load evaluation data and jump to questions
+     * @param {String} electionId - the id from the election to evaluate
+     */
     onElection = async (electionId: string) => {
         let electionsService = new ElectionsService();
         this.persistedSetState({
@@ -91,6 +114,10 @@ class App extends React.Component<Props, State> {
         });
     };
 
+
+    /**
+     * onWeightingCompleted - calculate the answers and weight data
+     */
     onWeightingCompleted = async () => {
         await this.persistedSetState({
             step: STEPS.EVALUATION,
@@ -98,6 +125,11 @@ class App extends React.Component<Props, State> {
         });
     };
 
+
+    /**
+     * renderElections - render all elections
+     * @return {HTML}
+     */
     renderElections = () => {
         let elections = [];
         for (let i = 0; i < this.state.elections.length; i++) {
@@ -111,7 +143,7 @@ class App extends React.Component<Props, State> {
             );
         }
         return (
-            <div className="app-inner-container">
+            <section className="app-inner-container">
                 <h1 className="no-margin margin-bot-16 text-center">OpenElectio</h1>
                 <p className="no-margin margin-bot-16 text-center">Herzlich Willkommen bei OpenElectio. Hier können Sie
                     alle Parteien für die anstehenden Wahlen vergleichen.<br/>
@@ -121,24 +153,33 @@ class App extends React.Component<Props, State> {
                         elections ? elections : (<p>no elections found</p>)
                     }
                 </div>
-                <p className="text-center">Made with 💜 in Germany. <a
+                <p className="text-center">Made with &hearts; in Germany. <a
                     href="https://github.com/voltdeutschland/OpenElectio" target="_blank">Get Open Source
                     Code here</a></p>
                 <p className="text-center disclaimer-text">Das ist eine Demo.</p>
-            </div>
+            </section>
         )
     };
 
+
+    /**
+     * renderQuestions - render a question
+     * @return {HTML}
+     */
     renderQuestions = () => {
         return (
-            <div className="app-inner-container">
+            <section className="app-inner-container">
                 <Progress percent={Math.round(this.state.activeQuestion / this.state.questions.length * 100)}
                           status="active"/>
                 <Question onAnswer={this.onAnswer} question={this.state.questions[this.state.activeQuestion]}/>
-            </div>
+            </section>
         )
     };
 
+
+    /**
+     * renderWeighting - render all weightings
+     */
     renderWeighting = () => {
         let weights = [];
         for (let i = 0; i < this.state.questions.length; i++) {
@@ -148,7 +189,7 @@ class App extends React.Component<Props, State> {
                                  weight={this.state.answers[i].weight} onWeight={this.onWeight}/>);
         }
         return (
-            <div className="app-inner-container">
+            <section className="app-inner-container">
                 <h1 className="text-center">Gewichtung</h1>
                 <p className="text-center">Klicke hier die Fragen an, die dir besonders wichtig sind, um sie in der
                     Auswertung doppelt zu gewichten.</p>
@@ -158,10 +199,15 @@ class App extends React.Component<Props, State> {
                 <div className="button-container">
                     <button className="pure-button" onClick={this.onWeightingCompleted}>weiter</button>
                 </div>
-            </div>
+            </section>
         )
     };
 
+
+    /**
+     * renderEvaluation - render the evaluation
+     * @return {HTML}
+     */
     renderEvaluation = () => {
         // expect parties to be sorted descending by concordance
         let parties = [];
@@ -173,7 +219,7 @@ class App extends React.Component<Props, State> {
                                      key={"evaluation" + i}/>)
         }
         return (
-            <div className="app-inner-container">
+            <section className="app-inner-container">
                 <h1 className="text-center">Auswertung</h1>
                 <article className="parties-container">
                     {
@@ -187,10 +233,15 @@ class App extends React.Component<Props, State> {
                         Neustart
                     </button>
                 </div>
-            </div>
+            </section>
         )
     };
 
+
+    /**
+     * render - Render the app content
+     * @return {HTML}
+     */
     render = () => {
         let content = this.renderElections();
         switch (this.state.step) {
@@ -210,14 +261,19 @@ class App extends React.Component<Props, State> {
                 content = this.renderElections();
         }
         return (
-            <div className="app-container">
+            <article className="app-container">
                 {
                     content
                 }
-            </div>
+            </article>
         )
     };
 
+
+    /**
+     * persistedSetState - set a new persisted state
+     * @param {STATE} newState - the new state
+     */
     persistedSetState = (newState) => {
         return new Promise((resolve) => {
             this.setState(newState, () => {

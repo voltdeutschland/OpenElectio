@@ -10,8 +10,16 @@ type Props = {
     onWeight: (questionNumber: number, weight: number) => mixed
 };
 
+
+/**
+ * Representate a Weight Component
+ */
 class Weight extends React.Component<Props> {
 
+
+    /**
+     * onWeight - set the weight
+     */
     onWeight = () => {
         let weight = 1;
         if (this.props.weight === 1) {
@@ -20,6 +28,11 @@ class Weight extends React.Component<Props> {
         this.props.onWeight(this.props.questionNumber, weight);
     };
 
+
+    /**
+     * render - render the weight element
+     * @return {HTML}
+     */
     render = () => {
         console.log(this.props.weight)
         return (
