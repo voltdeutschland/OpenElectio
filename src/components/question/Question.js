@@ -10,7 +10,7 @@ type Props = {
 
 
 /**
- * The question Object
+ * The question Component
  */
 class Question extends React.Component<Props> {
 

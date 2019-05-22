@@ -20,7 +20,7 @@ type State = {
 
 
 /**
- * Evaluate object
+ * Evaluate Component
  */
 class Evaluation extends React.Component<Props, State> {
 

@@ -50,7 +50,7 @@ class App extends React.Component<Props, State> {
 
 
     /**
-     * componentWillMount - mount a compenent
+     * componentWillMount - Called whenever an App component will be mounted
      */
     componentWillMount = async () => {
         let state: ?string = localStorage.getItem(SharedConstants.STORAGE_PATH);
@@ -74,7 +74,7 @@ class App extends React.Component<Props, State> {
 
     /**
      * onAnswer - evaluate answer
-     * @param {Integer} answer - -1 fot no, 0 for neutral, 1 for yes and null to do not calculate the answer
+     * @param {Integer} answer - -1 = no, 0 = neutral, 1 = yes and null = do not calculate the answer
      */
     onAnswer = (answer: -1 | 0 | 1 | null) => {
         let answers = this.state.answers;
@@ -88,7 +88,7 @@ class App extends React.Component<Props, State> {
 
 
     /**
-     * onWeight - evaluate questionweights
+     * onWeight - set question weight
      * @param {Number} questionNumber - The question id to set the weight
      * @param {Number} weight - the weight to set
      */
@@ -100,7 +100,7 @@ class App extends React.Component<Props, State> {
 
 
     /**
-     * onElection - evaluate Election
+     * onElection - load evaluation data and jump to questions
      * @param {String} electionId - the id from the election to evaluate
      */
     onElection = async (electionId: string) => {
@@ -116,7 +116,7 @@ class App extends React.Component<Props, State> {
 
 
     /**
-     * onWeightingCompleted - if the weighting complete
+     * onWeightingCompleted - calculate the answers and weight data
      */
     onWeightingCompleted = async () => {
         await this.persistedSetState({

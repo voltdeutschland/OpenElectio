@@ -12,7 +12,7 @@ type Props = {
 
 
 /**
- * Representate a Weight object
+ * Representate a Weight Component
  */
 class Weight extends React.Component<Props> {
 
@@ -31,7 +31,7 @@ class Weight extends React.Component<Props> {
 
     /**
      * render - render the weight element
-     * @return {HTML}    
+     * @return {HTML}
      */
     render = () => {
         console.log(this.props.weight)
